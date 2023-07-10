@@ -1,0 +1,25 @@
+<menu class="toolbar">
+  <button (click)="scroll()">About Me</button>
+  <button (click)="scroll(paper)">Papers</button>
+  <button (click)="scroll(project)">Projects</button>
+  <button (click)="scroll(career)">Career</button>
+  <div class="spacer"></div>
+</menu>
+
+<div class="content" role="main">
+  <div>
+    <app-about-me></app-about-me>
+  </div>
+
+  <div #paper>
+    <app-papers></app-papers>
+  </div>
+
+  <div #project>
+    <app-projects></app-projects>
+  </div>
+
+  <div #career>
+    <app-career></app-career>
+  </div>
+</div>
