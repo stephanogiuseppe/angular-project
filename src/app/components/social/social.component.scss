@@ -1,0 +1,9 @@
+div {
+  display: flex;
+  align-content: space-between;
+  width: 100%;
+
+  .social-item {
+    display: flex;
+  }
+}

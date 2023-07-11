@@ -1,0 +1,22 @@
+@import "./../../../styles.scss";
+
+:host {
+  ::ng-deep .grid.grid-nogutter.justify-content-center.ng-star-inserted {
+    width: 80%;
+  }
+
+  ::ng-deep button.p-ripple.p-element.p-galleria-item-next.p-galleria-item-nav.p-link.ng-star-inserted,
+  ::ng-deep button.p-ripple.p-element.p-galleria-item-prev.p-galleria-item-nav.p-link.ng-star-inserted {
+    border: none;
+    color: $base-color;
+  }
+
+  ::ng-deep button.p-ripple.p-element.p-galleria-thumbnail-next.p-link.ng-star-inserted,
+  ::ng-deep button.p-ripple.p-element.p-galleria-thumbnail-prev.p-link.ng-star-inserted {
+    color: $base-color;
+  }
+
+  ::ng-deep .p-galleria .p-galleria-thumbnail-container {
+    background: $background-color;
+  }
+}

@@ -1,9 +1,17 @@
+@import 'primeng/resources/themes/lara-light-blue/theme.css';
+@import 'primeng/resources/primeng.css';
+
 $primary-color: #4B9FB1;
 $primary-dark: #285761;
 $primary-light: rgba($primary-color, 0.60);
 $base-color: #323232;
-$neutral-color: #D9D9D9;
+$neutral-color: #EEE;
 $background-color: $neutral-color;
+$max-width-page: 960px;
+
+* {
+  background: $background-color;
+}
 
 h1, h3, a {
   color: $primary-color;
@@ -23,4 +31,7 @@ h2 {
   color: $primary-color;
 }
 
-
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

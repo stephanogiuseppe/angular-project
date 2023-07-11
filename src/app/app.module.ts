@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -12,6 +12,14 @@ import { PersonalImageComponent } from './components/personal-image/personal-ima
 import { CarouselPapersComponent } from './components/carousel-papers/carousel-papers.component';
 import { CarouselVideosComponent } from './components/carousel-videos/carousel-videos.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'primeng/carousel';
+import { AnimateModule } from 'primeng/animate';
+import { TagModule } from 'primeng/tag';
+import { ButtonModule } from 'primeng/button';
+import { GalleriaModule } from 'primeng/galleria';
+
+import {TreeModule} from 'primeng/tree';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +33,16 @@ import { CarouselVideosComponent } from './components/carousel-videos/carousel-v
     CarouselVideosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    CarouselModule,
+    GalleriaModule,
+    AnimateModule,
+    TagModule,
+    ButtonModule,
+    TreeModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

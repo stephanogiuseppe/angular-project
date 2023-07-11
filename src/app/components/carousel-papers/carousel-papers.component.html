@@ -1,16 +1,43 @@
-<div class="card-container">
-  <a class="card" target="_blank" rel="noopener" href="https://material.angular.io">
-    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-    </svg>
-  </a>
-  <p>carousel papers</p>
-  <a class="card" target="_blank" rel="noopener" href="https://material.angular.io">
-    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-    </svg>
-  </a>
-</div>
+<p-carousel [value]="papers" [numVisible]="3" [numScroll]="3">
+  <ng-template let-paper pTemplate="item">
+    <div class="product-item">
+      <div class="product-item-content">
+        <div class="p-mb-3"></div>
 
+        <div class="">
+          <h4 class="p-mb-1">
+            {{ paper.id }}
+          </h4>
 
-https://primeng.org/carousel#style
+          <h4 class="p-mb-1">
+            {{ paper.name }}
+          </h4>
+
+          <h4 class="p-mb-1">
+            {{ paper.description }}
+          </h4>
+
+          <h6 class="p-mt-0 p-mb-3">${{ paper.image }}</h6>
+
+          <div class="paper-buttons p-mt-3">
+            <p-button
+              type="button"
+              styleClass="p-button p-button-rounded p-mr-2"
+              icon="pi pi-search">
+            </p-button>
+            <p-button
+              type="button"
+              styleClass="p-button-success p-button-rounded p-mr-2"
+              icon="pi pi-star">
+            </p-button>
+            <p-button
+              type="button"
+              styleClass="p-button-help p-button-rounded"
+              icon="pi pi-cog">
+            </p-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

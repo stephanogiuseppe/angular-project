@@ -1,2 +1,53 @@
-<app-carousel-papers>
+
 https://efficientuser.com/2020/03/09/angular-9-youtuber-player-component/
+
+<!-- <div style="width:80%; background-color: black; ">
+  <p-galleria [numVisible]="3" [value]="images">
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item.previewImageSrc" [alt]="item.alt" [title]="item.title" style="width: 50%;" />
+    </ng-template>
+
+
+    <ng-template pTemplate="thumbnail" let-item width="50%">
+      <div class="grid  grid-nogutter justify-content-center">
+        <img [src]="item.thumbnailImageSrc" [alt]="item.alt" [title]="item.title" width=80% />
+      </div>
+    </ng-template>
+
+  </p-galleria>
+
+</div> -->
+
+
+<div style="width:100%; background-color: blue;">
+  <p-galleria [numVisible]="3" [value]="images" [containerStyle]="{ 'background': '#FFF' }" [showItemNavigators]="true">
+    <ng-template pTemplate="item" let-item>
+      <ng-template [ngIf]="item.isVideo">
+        <div class="grid grid-nogutter justify-content-center">
+          <iframe
+            width="100%"
+            height="auto"
+            [src]="getSanitizerUrl(item.src)"
+            frameborder="0"
+            allowfullscreen
+            style="width: 100%; min-height: 420px; display: block;"
+          ></iframe>
+        </div>
+      </ng-template>
+
+
+      <ng-template [ngIf]="item.isVideo == false">
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.src" [alt]="item.alt" [title]="item.title" style="width: 100%; min-height: 420px; display: block;"/>
+        </div>
+      </ng-template>
+    </ng-template>
+
+    <ng-template pTemplate="thumbnail" let-item width="50%">
+      <div class="grid  grid-nogutter justify-content-center">
+        <img [src]="item.thumbnailImageSrc" style="display: block;" [alt]="item.alt" [title]="item.title" width=80% />
+      </div>
+    </ng-template>
+  </p-galleria>
+
+</div>

@@ -1,25 +1,27 @@
 <menu class="toolbar">
-  <button (click)="scroll()">About Me</button>
-  <button (click)="scroll(paper)">Papers</button>
-  <button (click)="scroll(project)">Projects</button>
-  <button (click)="scroll(career)">Career</button>
-  <div class="spacer"></div>
+  <div class="menu-container">
+    <button class="btn" (click)="scroll()">About Me</button>
+    <button class="btn" (click)="scroll(paper)">Papers</button>
+    <button class="btn" (click)="scroll(project)">Projects</button>
+    <button class="btn" (click)="scroll(career)">Career</button>
+    <div class="spacer"></div>
+  </div>
 </menu>
 
 <div class="content" role="main">
-  <div>
+  <div class="page">
     <app-about-me></app-about-me>
   </div>
 
-  <div #paper>
+  <div #paper class="page">
     <app-papers></app-papers>
   </div>
 
-  <div #project>
+  <div #project class="page">
     <app-projects></app-projects>
   </div>
 
-  <div #career>
+  <div #career class="page">
     <app-career></app-career>
   </div>
 </div>
