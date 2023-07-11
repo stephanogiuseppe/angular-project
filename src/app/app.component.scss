@@ -34,14 +34,14 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 45px;
   display: flex;
   align-items: center;
   background-color: $background-color;
   color: white;
   font-weight: 600;
   margin-top: 0;
-  box-shadow: 0px 1px 4px $base-color;
+  box-shadow: 0px 0.2px 2px $base-color;
   font-size: 15px;
 
   .menu-container {
@@ -80,6 +80,7 @@ p {
 
   .page:not(:first-child) {
     border-top: 1px solid $primary-color;
+    margin: 60px 0 0;
   }
 }
 
