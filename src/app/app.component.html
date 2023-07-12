@@ -1,27 +1,31 @@
-<menu class="toolbar">
-  <div class="menu-container">
-    <button class="btn" (click)="scroll()">About Me</button>
-    <button class="btn" (click)="scroll(paper)">Papers</button>
-    <button class="btn" (click)="scroll(project)">Projects</button>
-    <button class="btn" (click)="scroll(career)">Career</button>
-    <div class="spacer"></div>
-  </div>
-</menu>
+<div class="container-page"
+[ngStyle]="{'background-image': 'url(./assets/img/bg.png)'}">
 
-<div class="content" role="main">
-  <div class="page">
-    <app-about-me></app-about-me>
-  </div>
+  <menu class="toolbar">
+    <div class="menu-container">
+      <button class="btn" (click)="scroll()">About Me</button>
+      <button class="btn" (click)="scroll(paper)">Papers</button>
+      <button class="btn" (click)="scroll(project)">Projects</button>
+      <button class="btn" (click)="scroll(career)">Career</button>
+      <div class="spacer"></div>
+    </div>
+  </menu>
 
-  <div #paper class="page">
-    <app-papers></app-papers>
-  </div>
+  <div class="content" role="main">
+    <div class="page">
+      <app-about-me></app-about-me>
+    </div>
 
-  <div #project class="page">
-    <app-projects></app-projects>
-  </div>
+    <div #paper class="page">
+      <app-papers></app-papers>
+    </div>
 
-  <div #career class="page">
-    <app-career></app-career>
+    <div #project class="page">
+      <app-projects></app-projects>
+    </div>
+
+    <div #career class="page">
+      <app-career></app-career>
+    </div>
   </div>
 </div>
