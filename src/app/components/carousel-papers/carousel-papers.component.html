@@ -4,38 +4,16 @@
       <div class="product-item-content">
         <div class="p-mb-3"></div>
 
-        <div class="">
-          <h4 class="p-mb-1">
-            {{ paper.id }}
-          </h4>
+        <div class="carousel-item">
+
+          <img src="{{ paper.image }}" alt="{{ paper.name }}">
 
           <h4 class="p-mb-1">
             {{ paper.name }}
           </h4>
 
-          <h4 class="p-mb-1">
-            {{ paper.description }}
-          </h4>
 
-          <h6 class="p-mt-0 p-mb-3">${{ paper.image }}</h6>
 
-          <div class="paper-buttons p-mt-3">
-            <p-button
-              type="button"
-              styleClass="p-button p-button-rounded p-mr-2"
-              icon="pi pi-search">
-            </p-button>
-            <p-button
-              type="button"
-              styleClass="p-button-success p-button-rounded p-mr-2"
-              icon="pi pi-star">
-            </p-button>
-            <p-button
-              type="button"
-              styleClass="p-button-help p-button-rounded"
-              icon="pi pi-cog">
-            </p-button>
-          </div>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ interface Paper {
   id?: string;
   name?: string;
   description?: string;
-  image?: number;
+  image?: string;
 }
 
 @Component({
@@ -28,43 +28,43 @@ export class CarouselPapersComponent implements OnInit {
             id: '1',
             name: 'Project 1',
             description: 'A Systematic Dataset for 5G UAV',
-            image: 800,
+            image: 'assets/img/job/paper1.png',
           },
           {
             id: '2',
             name: 'Project 2',
             description: 'Another Theme Here ',
-            image: 1500,
+            image: 'assets/img/job/paper2.png',
           },
           {
             id: '3',
             name: 'Project 3',
             description: 'Another Theme Here 2',
-            image: 10000,
+            image: 'assets/img/job/paper1.png',
           },
           {
             id: '4',
             name: 'Project 5',
             description: 'Another Theme Here 2',
-            image: 10000,
+            image: 'assets/img/job/paper1.png',
           },
           {
             id: '5',
             name: 'Project 5',
             description: 'Another Theme Here 2',
-            image: 10000,
+            image: 'assets/img/job/paper1.png',
           },
           {
             id: '6',
             name: 'Project 6',
             description: 'Another Theme Here 2',
-            image: 10000,
+            image: 'assets/img/job/paper1.png',
           },
           {
             id: '7',
             name: 'Project 7',
             description: 'Another Theme Here 2',
-            image: 10000,
+            image: 'assets/img/job/paper1.png',
           },
         ];
     }

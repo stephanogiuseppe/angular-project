@@ -5,18 +5,60 @@
     width: 80%;
   }
 
-  ::ng-deep button.p-ripple.p-element.p-galleria-item-next.p-galleria-item-nav.p-link.ng-star-inserted,
-  ::ng-deep button.p-ripple.p-element.p-galleria-item-prev.p-galleria-item-nav.p-link.ng-star-inserted {
+  ::ng-deep
+    button.p-ripple.p-element.p-galleria-item-next.p-galleria-item-nav.p-link.ng-star-inserted,
+  ::ng-deep
+    button.p-ripple.p-element.p-galleria-item-prev.p-galleria-item-nav.p-link.ng-star-inserted {
     border: none;
     color: $base-color;
   }
 
-  ::ng-deep button.p-ripple.p-element.p-galleria-thumbnail-next.p-link.ng-star-inserted,
-  ::ng-deep button.p-ripple.p-element.p-galleria-thumbnail-prev.p-link.ng-star-inserted {
+  ::ng-deep
+    button.p-ripple.p-element.p-galleria-thumbnail-next.p-link.ng-star-inserted,
+  ::ng-deep
+    button.p-ripple.p-element.p-galleria-thumbnail-prev.p-link.ng-star-inserted {
     color: $base-color;
   }
 
   ::ng-deep .p-galleria .p-galleria-thumbnail-container {
     background: $background-color;
+  }
+
+  ::ng-deep .p-galleria .p-galleria-item-nav .p-icon-wrapper .p-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  ::ng-deep
+    button.p-ripple.p-element.p-galleria-item-prev.p-galleria-item-nav.p-link.ng-star-inserted,
+  ::ng-deep
+    button.p-ripple.p-element.p-galleria-item-next.p-galleria-item-nav.p-link.ng-star-inserted {
+    margin: 0;
+    width: auto;
+  }
+
+  ::ng-deep
+    button.p-ripple.p-element.p-galleria-thumbnail-prev.p-link.ng-star-inserted,
+  ::ng-deep
+    button.p-ripple.p-element.p-galleria-thumbnail-next.p-link.ng-star-inserted {
+    width: auto;
+    margin: 0;
+  }
+
+  ::ng-deep p-galleriaitemslot,
+  ::ng-deep .p-galleria-thumbnail-item-content,
+  ::ng-deep .p-galleria-thumbnail-item.p-galleria-thumbnail-item-active.p-galleria-thumbnail-item-end.ng-star-inserted,
+  ::ng-deep .grid.grid-nogutter.justify-content-center.ng-star-inserted {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .grid.grid-nogutter.justify-content-center.ng-star-inserted:last-child {
+    padding: 0;
+    margin: 0;
+  }
+
+  .galery-img {
+    height: 420px;
   }
 }

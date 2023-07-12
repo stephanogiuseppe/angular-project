@@ -1,9 +1,5 @@
 .product-item-content {
-  border: 1px solid var(--surface-d);
-  border-radius: 3px;
-  margin: 0.3rem;
   text-align: center;
-  padding: 2rem 0;
 }
 
 .product-image {
@@ -20,5 +16,9 @@
       border-radius: 50% !important;
       display: inline-block !important;
     }
+  }
+
+  ::ng-deep .carousel-item img {
+    max-height: 200px;
   }
 }

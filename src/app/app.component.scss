@@ -42,7 +42,6 @@ p {
   font-weight: 600;
   margin-top: 0;
   box-shadow: 0px 0.2px 2px $base-color;
-  font-size: 15px;
 
   .menu-container {
     max-width: $max-width-page;
@@ -57,6 +56,7 @@ p {
     border: none;
     cursor: pointer;
     color: $base-color;
+    font-size: 15px;
 
     &:hover {
       color: $primary-color;
@@ -77,6 +77,10 @@ p {
   max-width: $max-width-page;
   flex-direction: column;
   align-items: center;
+
+  .page {
+    max-width: 960px;
+  }
 
   .page:not(:first-child) {
     border-top: 1px solid $primary-color;
