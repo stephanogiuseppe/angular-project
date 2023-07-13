@@ -8,7 +8,6 @@ import { PapersComponent } from './pages/papers/papers.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { CareerComponent } from './pages/career/career.component';
 import { SocialComponent } from './components/social/social.component';
-import { PersonalImageComponent } from './components/personal-image/personal-image.component';
 import { CarouselPapersComponent } from './components/carousel-papers/carousel-papers.component';
 import { CarouselVideosComponent } from './components/carousel-videos/carousel-videos.component';
 
@@ -28,7 +27,6 @@ import {TreeModule} from 'primeng/tree';
     ProjectsComponent,
     CareerComponent,
     SocialComponent,
-    PersonalImageComponent,
     CarouselPapersComponent,
     CarouselVideosComponent
   ],

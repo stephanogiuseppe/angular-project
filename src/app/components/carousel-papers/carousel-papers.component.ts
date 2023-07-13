@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 interface Paper {
   id?: string;
@@ -46,7 +46,7 @@ export class CarouselPapersComponent implements OnInit {
         title: 'Latent Space Transformers for Generalizing Deep Networks',
         image: 'assets/img/job/paper1.png',
         linkSrc: 'https://ieeexplore.ieee.org/document/9686099',
-      },
+      }
     ];
   }
 }
