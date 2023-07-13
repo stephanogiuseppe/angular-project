@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,15 +6,21 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
   title = 'joseanne-viana';
+  selectedMenuItem = 'about';
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    console.log('SCROLL -> ', window.scrollY);
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
+  @ViewChild('about', { static: false })
+  about: ElementRef<HTMLDivElement> | undefined;
+  menuActive = '';
+
+  @HostListener('window:scroll', ['$event'])
+  isScrolledIntoView() {
+    if (this.about) {
+      const rect = this.about.nativeElement.getBoundingClientRect();
+      const topShown = rect.top >= 0;
+      const bottomShown = rect.bottom <= window.innerHeight;
+      topShown && bottomShown ? (this.menuActive = 'about') : '';
     }
+    console.log(this.menuActive);
   }
 
   public scroll = (el?: HTMLElement) => {
