@@ -14,12 +14,18 @@ interface Paper {
 })
 export class CarouselPapersComponent implements OnInit {
   papers: Paper[] = [];
+  isMobile = false;
 
   ngOnInit() {
+    if (window.screen.width <= 570) {
+      this.isMobile = true;
+    }
+
     this.papers = [
       {
         id: '1',
-        title: 'Deep Attention Recognition for Attack Identification in 5G UAV scenarios: Novel Architecture and End-to-End Evaluation',
+        title:
+          'Deep Attention Recognition for Attack Identification in 5G UAV scenarios: Novel Architecture and End-to-End Evaluation',
         image: 'assets/img/job/paper1.png',
         linkSrc: 'https://arxiv.org/pdf/2303.12947.pdf',
       },
@@ -31,7 +37,8 @@ export class CarouselPapersComponent implements OnInit {
       },
       {
         id: '3',
-        title: 'A Synthetic Dataset for 5G UAV Attacks Based on Observable Network Parameters',
+        title:
+          'A Synthetic Dataset for 5G UAV Attacks Based on Observable Network Parameters',
         image: 'assets/img/job/paper1.png',
         linkSrc: 'https://arxiv.org/abs/2211.09706',
       },
@@ -46,7 +53,7 @@ export class CarouselPapersComponent implements OnInit {
         title: 'Latent Space Transformers for Generalizing Deep Networks',
         image: 'assets/img/job/paper1.png',
         linkSrc: 'https://ieeexplore.ieee.org/document/9686099',
-      }
+      },
     ];
   }
 }

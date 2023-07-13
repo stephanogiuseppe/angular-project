@@ -39,7 +39,8 @@ p {
   color: white;
   font-weight: 600;
   margin-top: 0;
-  box-shadow: 0px 0.2px 2px $base-color;
+  box-shadow: 1px 0.2px 2px $base-color;
+  padding: 0px;
 
   .menu-container {
     max-width: $max-width-page;
@@ -86,80 +87,6 @@ p {
   }
 }
 
-svg.material-icons {
-  height: 24px;
-  width: auto;
-}
-
-svg.material-icons:not(:last-child) {
-  margin-right: 8px;
-}
-
-svg#rocket {
-  width: 80px;
-  position: absolute;
-  left: -10px;
-  top: -24px;
-}
-
-svg#rocket-smoke {
-  height: calc(100vh - 95px);
-  position: absolute;
-  top: 10px;
-  right: 180px;
-  z-index: -10;
-}
-
-a,
-a:visited,
-a:hover {
-  color: #1976d2;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #125699;
-}
-
-.circle-link:hover {
-  transform: translateY(-0.25rem);
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  line-height: 20px;
-}
-
-footer a {
-  display: flex;
-  align-items: center;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
-  .card-container > *:not(.circle-link),
-  .terminal {
-    width: 100%;
-  }
-
-  .card:not(.highlight-card) {
-    height: 16px;
-    margin: 8px 0;
-  }
-
-  .card.highlight-card span {
-    margin-left: 72px;
-  }
-
-  svg#rocket-smoke {
-    right: 120px;
-    transform: rotate(-5deg);
-  }
-}
-
 .container-page {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -167,13 +94,41 @@ footer a {
   background-position-y: 420px;
 }
 
-@media screen and (max-width: 575px) {
-  svg#rocket-smoke {
-    display: none;
-    visibility: hidden;
-  }
-}
-
 .principal {
   height: 1000px !important;
 }
+
+@media screen and (max-width: 790px) {
+  ::ng-deep div.presentation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ::ng-deep .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ::ng-deep button.btn {
+    padding: 0;
+    margin: 0px!important;
+  }
+
+  ::ng-deep .menu-container {
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ::ng-deep p.p-mb-1 {
+    font-size: 16px!important;
+  }
+
+  ::ng-deep .profile {
+    padding: 0px!important;
+  }
+}
+
