@@ -14,8 +14,12 @@ npm i
 ng serve
 ```
 
+Acessar porta `4200`
+
 Build da imagem:
 
 ```sh
 sudo docker-compose -f "docker-compose.yml" up -d --build
 ```
+
+Acessar porta `8081`
