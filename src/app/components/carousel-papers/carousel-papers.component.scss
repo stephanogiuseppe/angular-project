@@ -37,5 +37,10 @@
     flex-direction: column;
     text-align: center;
   }
+
+  ::ng-deep  div.mobile .p-carousel-items-content {
+    height: auto;
+    width: 250px;
+  }
 }
 

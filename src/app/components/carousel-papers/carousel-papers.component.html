@@ -15,7 +15,24 @@
   </p-carousel>
 </div>
 
+<div class="mobile" *ngIf="isMobile">
+  <p-carousel [value]="papers" [numVisible]="1" [numScroll]="1">
+    <ng-template let-paper pTemplate="item">
+      <div class="paper-item">
+        <div class="paper-item-content">
+          <div class="carousel-item">
+            <a href="{{ paper.linkSrc }}" target="_blank">
+              <img class="paper-image" src="{{ paper.image }}" alt="{{ paper.title }}">
+              <p class="p-mb-1">{{ paper.title }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
 
+<!--
 <div *ngIf="isMobile">
   <div *ngFor="let paper of papers">
     <a class="paper-responsive" href="{{ paper.linkSrc }}" target="_blank">
@@ -24,4 +41,4 @@
     </a>
   </div>
 </div>
-
+ -->

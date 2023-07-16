@@ -11,21 +11,56 @@ h1 {
   .text {
     flex-grow: 1;
     order: 1;
-    font-size: 18px;
+    font-size: 1rem;
     text-align: start;
+    text-align: justify;
+    margin-right: 1rem;
   }
 
   .profile {
     padding: 15px 105px;
     flex-grow: 4;
     order: 2;
+    border-left: 1px solid $primary-color;
+
+    padding: 35px 0px 0 30px;
+
 
     .photo {
       height: 325px;
-      margin: 0 0 20px 0;
-      // box-shadow: 3px 3px 10px #aaaaaa;
+      margin: 0 0 35px 0;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.23);
-      border-radius: 50%
+      // formato oval
+      // border-radius: 50%
     }
   }
+}
+h2.subtitle {
+  font-size: 1.5rem;
+  border-top: 1px solid $primary-color;
+  margin: 1.5rem 0 0;
+  padding: 1rem 0 0;
+}
+
+.bullets {
+    display: flex;
+    justify-content: flex-start;
+
+    ul {
+      padding: 0 4rem 0 20px;
+      list-style: none;
+
+      li {
+        font-size: 1rem;
+
+        &::before {
+          content: '✓';
+          color: $primary-color;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
 }

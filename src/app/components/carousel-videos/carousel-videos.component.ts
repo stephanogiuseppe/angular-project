@@ -23,14 +23,7 @@ export class CarouselVideosComponent {
       thumbnailImageSrc: 'assets/img/job/video2.png',
       title: 'Relaying Drones in 5G Communications Systems',
       alt: 'Relaying Drones in 5G Communications Systems Video',
-    },
-    {
-      isVideo: false,
-      src: 'assets/img/job/project.gif',
-      thumbnailImageSrc: 'assets/img/job/project.png',
-      alt: 'Attacks Identification GIF',
-      title: 'Attacks Identification',
-    },
+    }
   ];
 
   getSanitizerUrl(url: string) {
