@@ -23,3 +23,9 @@ sudo docker-compose -f "docker-compose.yml" up -d --build
 ```
 
 Acessar porta `8081`
+
+GGC
+
+- Container Registry -> Enable Container API
+- dokcer tag gcr.io/project_id_google/image_name
+- docker push gcr.io/project_id_google/image_name
